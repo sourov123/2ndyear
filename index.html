@@ -31,7 +31,38 @@
   width: 10px!important;
   background-color: #2a8dd6!important;
 }
+.scrolltop {
+	padding-top: 2px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+	 background: rgb(0, 0, 0);
+    background:#2e2ed4;
+    width: 40px;
+    height: 40px;
+	color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    display: none;
+	z-index: 999;
+	cursor:pointer;
+}
 
+	.scrolltop:before{
+		content: '';
+		left: 0px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		margin: 0 auto;
+		margin-top: 14px;
+		width: 20px;
+		height: 20px;
+		border-bottom: 4px solid #FFFFFF;
+		border-left: 4px solid #FFFFFF;
+		transform: rotate(135deg);
+	}
 
 ::-webkit-scrollbar-track {
   
@@ -282,6 +313,7 @@ Completing two years full of love and happiness makes me hopeful for our future.
         <h3 align="center" style="color: #fff; overflow-y: hidden; font-family: 'Indie Flower', cursive;"> Made With <span><i class="em em-heartpulse"></i></span> by kuchu puchu.</h3>
 
     </footer>
+<a class="scrolltop text-center"></a>
 <script type="text/javascript">
   $(document).bind("contextmenu",function(e) {
   e.preventDefault();
@@ -306,6 +338,23 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });
 </script>
+	  <script type="text/javascript">
+				  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 1000) {      
+        $('.scrolltop').fadeIn(20);    
+    } else {
+        $('.scrolltop').fadeOut(200);  
+    }
+});
+				  
+$(".scrolltop").click(function() {
+
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return true;
+});	  
+			  
+			  </script>
+  
    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
