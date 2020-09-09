@@ -323,13 +323,6 @@ Completing two years full of love and happiness makes me hopeful for our future.
 
 
 
-<script type="text/javascript">
-  $(document).bind("contextmenu",function(e) {
-  e.preventDefault();
-  alert("Not allow any activity");
-return false;
-});
-</script>
 
 
   <script>
@@ -404,10 +397,10 @@ $(document).ready(function(){
 
 	  <script type="text/javascript">
  $(window).scroll(function() {
-    if ($(this).scrollTop() >= 500) {      
+    if ($(this).scrollTop() >= 300) {      
         $('.scrolltop').fadeIn(10);    
     } else {
-        $('.scrolltop').fadeOut(100);  
+        $('.scrolltop').fadeOut(80);  
     }
 });
 				  
@@ -423,5 +416,12 @@ $(".scrolltop").click(function() {
   src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 
+<script type="text/javascript">
+
+	$(document).bind("contextmenu",function(e){
+		alert("Not allow any activity");
+  return false;
+    });
+</script>
   </body>
 </html>
